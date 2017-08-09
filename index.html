@@ -120,3 +120,24 @@ encoding:
 
 </body>
 </html>
+
+# Data Visualization
+<p> **Money in circulation** </p>
+
+```vis
+data:
+  url: data/notes.csv
+mark: bar
+encoding:
+  x:
+    field: year
+    type: T
+  y:
+    field: money
+    type: Q
+    aggregate: sum
+  color:
+    field: denom
+    type: N
+
+```
